@@ -1,1 +1,289 @@
-/* YOUR CSS HERE */
+* {
+  box-sizing: border-box;
+  font-family: "Karla", serif;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 932px) {
+  .container {
+    padding: 30px 10%;
+  }
+  .container header .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .container header .header-container h1 {
+    font-size: 48px;
+  }
+  .container header .header-container p {
+    font-size: 24px;
+  }
+  .container header .header-container .cart-toggle-btn {
+    display: none;
+  }
+  .container .wrapper {
+    margin: 50px auto;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+  .container .wrapper main {
+    width: 70%;
+  }
+  .container .wrapper main .product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 80px;
+    column-gap: 10px;
+  }
+  .container .wrapper main .product-list .product-item.visible {
+    display: block;
+  }
+  .container .wrapper main .product-list .product-item {
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .container .wrapper main .product-list .product-item .image-container {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  .container .wrapper main .product-list .product-item .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .container .wrapper main .product-list .product-item h3 {
+    font-size: 18px;
+  }
+  .container .wrapper main .product-list .product-item button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .container .wrapper main .product-list .product-item button:hover {
+    background-color: gray;
+  }
+  .container .wrapper aside {
+    width: 30%;
+  }
+  .container .wrapper aside .cart h3 {
+    font-size: 18px;
+  }
+  .container .wrapper aside .cart .cart-total-item {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .container .wrapper aside .cart .cart-list .cart-item {
+    margin-top: 1rem;
+    list-style: none;
+  }
+  .container .wrapper aside .cart .cart-list .cart-item .cart-item-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+  .container .wrapper aside .cart .cart-list .cart-item .cart-item-buttons p {
+    font-size: 16px;
+  }
+  .container .wrapper aside .cart .cart-list .cart-item .cart-item-buttons button {
+    padding: 4px 8px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .container .wrapper aside .cart .cart-list .cart-item .cart-item-buttons button:hover {
+    background-color: gray;
+  }
+  .container .wrapper aside .cart .cart-total {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .container .wrapper aside .cart .cart-close-btn {
+    display: none;
+  }
+  .container footer .footer-container {
+    text-align: center;
+  }
+  .container footer .footer-container p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 932px) {
+  .container {
+    padding: 30px 10%;
+    position: relative;
+  }
+  .container header {
+    position: relative;
+  }
+  .container header .header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+  .container header .header-container h1 {
+    font-size: 24px;
+  }
+  .container header .header-container p {
+    font-size: 12px;
+  }
+  .container header .header-container .cart-toggle-btn {
+    position: fixed;
+    top: 30px;
+    right: 10%;
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: solid 1px black;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .container header .header-container .cart-toggle-btn.open {
+    display: none;
+  }
+  .container .wrapper {
+    margin: 50px auto;
+  }
+  .container .wrapper main .product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 10px;
+  }
+  .container .wrapper main .product-list .product-item.visible {
+    display: block;
+  }
+  .container .wrapper main .product-list .product-item {
+    padding: 10px;
+    text-align: center;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .container .wrapper main .product-list .product-item .image-container {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  .container .wrapper main .product-list .product-item .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .container .wrapper main .product-list .product-item h3 {
+    font-size: 12px;
+  }
+  .container .wrapper main .product-list .product-item button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .container .wrapper main .product-list .product-item button:hover {
+    background-color: gray;
+  }
+  .container .wrapper aside .cart-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .container .wrapper aside .cart-overlay.open {
+    display: block;
+    right: 0;
+  }
+  .container .wrapper aside .cart-overlay h3 {
+    font-size: 18px;
+  }
+  .container .wrapper aside .cart-overlay .cart-total-item {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .container .wrapper aside .cart-overlay .cart-list .cart-item {
+    margin-top: 1rem;
+    list-style: none;
+  }
+  .container .wrapper aside .cart-overlay .cart-list .cart-item .cart-item-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+  .container .wrapper aside .cart-overlay .cart-list .cart-item .cart-item-buttons p {
+    font-size: 16px;
+  }
+  .container .wrapper aside .cart-overlay .cart-list .cart-item .cart-item-buttons button {
+    padding: 4px 8px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .container .wrapper aside .cart-overlay .cart-list .cart-item .cart-item-buttons button:hover {
+    background-color: gray;
+  }
+  .container .wrapper aside .cart-overlay .cart-total {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .container .wrapper aside .cart-overlay .cart-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .container footer .footer-container {
+    text-align: center;
+  }
+  .container footer .footer-container p {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
