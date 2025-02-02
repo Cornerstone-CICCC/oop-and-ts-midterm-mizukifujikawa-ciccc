@@ -34,7 +34,6 @@ export class CartList extends Component {
   render() {
     const cartElement = document.createElement('div')
     cartElement.className = "cart cart-overlay"
-    console.log('this.state.cart', this.state.cart)
     cartElement.innerHTML = `
       <h3>Cart</h3>
       <p class="cart-total-item">Total number of items: 0</p>
@@ -56,7 +55,6 @@ export class CartList extends Component {
     })
 
     cartElement.querySelector(".cart-close-btn").addEventListener("click", () => {
-      console.log("click cart-close-btn")
       cartElement.classList.remove("open");
       document.querySelector("header button").classList.remove("open")
     });
